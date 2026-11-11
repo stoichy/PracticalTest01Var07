@@ -23,9 +23,11 @@ class PracticalTest01Var07MainActivity : AppCompatActivity() {
         ActivityResultContracts.StartActivityForResult()
     ) { result ->
         if (result.resultCode == RESULT_OK) {
-            Toast.makeText(this, "Result: OK", Toast.LENGTH_SHORT).show()
-        } else if (result.resultCode == RESULT_CANCELED) {
-            Toast.makeText(this, "Result: CANCEL", Toast.LENGTH_SHORT).show()
+            val resultValue = result.data?.getStringExtra("RESULT")
+                ?: result.data?.getIntExtra("RESULT_VALUE", 0)?.toString()
+            if (resultValue != null) {
+                Toast.makeText(this, resultValue, Toast.LENGTH_SHORT).show()
+            }
         }
     }
 
@@ -49,17 +51,11 @@ class PracticalTest01Var07MainActivity : AppCompatActivity() {
         }
 
         buttonSet.setOnClickListener {
-            val val1 = editText1.text.toString()
-            val val2 = editText2.text.toString()
-            val val3 = editText3.text.toString()
-            val val4 = editText4.text.toString()
-
             val intent = Intent(this, PracticalTest01Var07SecondaryActivity::class.java).apply {
-                putExtra("EXTRA_TEXT", "$val1, $val2, $val3, $val4")
-                putExtra("EXTRA_TEXT_1", val1)
-                putExtra("EXTRA_TEXT_2", val2)
-                putExtra("EXTRA_TEXT_3", val3)
-                putExtra("EXTRA_TEXT_4", val4)
+                putExtra("TEXT_1", editText1.text.toString())
+                putExtra("TEXT_2", editText2.text.toString())
+                putExtra("TEXT_3", editText3.text.toString())
+                putExtra("TEXT_4", editText4.text.toString())
             }
             secondaryActivityLauncher.launch(intent)
         }

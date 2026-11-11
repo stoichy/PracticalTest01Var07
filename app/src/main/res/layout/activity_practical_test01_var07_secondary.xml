@@ -6,17 +6,57 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="16dp"
-    android:gravity="center_horizontal"
     tools:context=".PracticalTest01Var07SecondaryActivity">
 
-    <TextView
-        android:id="@+id/textViewReceived"
+    <TableLayout
+        android:id="@+id/tableLayoutSecondary"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="18sp"
-        android:textAlignment="center"
-        android:layout_marginTop="32dp"
-        android:layout_marginBottom="24dp" />
+        android:stretchColumns="0,1"
+        android:layout_marginBottom="16dp">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/editTextSecondary1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:enabled="false"
+                android:gravity="center" />
+
+            <EditText
+                android:id="@+id/editTextSecondary2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:enabled="false"
+                android:gravity="center" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/editTextSecondary3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:enabled="false"
+                android:gravity="center" />
+
+            <EditText
+                android:id="@+id/editTextSecondary4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:enabled="false"
+                android:gravity="center" />
+        </TableRow>
+    </TableLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -24,20 +64,20 @@
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/buttonOk"
+            android:id="@+id/buttonSum"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:layout_marginEnd="8dp"
-            android:text="@string/button_ok_text" />
+            android:text="Sum" />
 
         <Button
-            android:id="@+id/buttonCancel"
+            android:id="@+id/buttonProduct"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:layout_marginStart="8dp"
-            android:text="@string/button_cancel_text" />
+            android:text="Products" />
     </LinearLayout>
 
 </LinearLayout>

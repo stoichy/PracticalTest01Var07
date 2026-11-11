@@ -24,8 +24,6 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:inputType="number"
-                android:hint="@string/hint_text_1"
                 android:gravity="center" />
 
             <EditText
@@ -33,8 +31,6 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:inputType="number"
-                android:hint="@string/hint_text_2"
                 android:gravity="center" />
         </TableRow>
 
@@ -47,8 +43,6 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:inputType="number"
-                android:hint="@string/hint_text_3"
                 android:gravity="center" />
 
             <EditText
@@ -56,8 +50,6 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:inputType="number"
-                android:hint="@string/hint_text_4"
                 android:gravity="center" />
         </TableRow>
     </TableLayout>
@@ -68,7 +60,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="8dp"
-        android:text="@string/button_set_text" />
+        android:text="Set" />
 
     <Button
         android:id="@+id/buttonRandom"
@@ -76,6 +68,6 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="8dp"
-        android:text="@string/button_random_text" />
+        android:text="Random" />
 
 </LinearLayout>
