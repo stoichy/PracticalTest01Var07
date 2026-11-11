@@ -22,10 +22,10 @@ class PracticalTest01Var07SecondaryActivity : AppCompatActivity() {
         val buttonSum = findViewById<Button>(R.id.buttonSum)
         val buttonProduct = findViewById<Button>(R.id.buttonProduct)
 
-        val val1 = intent.getStringExtra("TEXT_1") ?: ""
-        val val2 = intent.getStringExtra("TEXT_2") ?: ""
-        val val3 = intent.getStringExtra("TEXT_3") ?: ""
-        val val4 = intent.getStringExtra("TEXT_4") ?: ""
+        val val1 = intent.getStringExtra("text1") ?: ""
+        val val2 = intent.getStringExtra("text2") ?: ""
+        val val3 = intent.getStringExtra("text3") ?: ""
+        val val4 = intent.getStringExtra("text4") ?: ""
 
         editText1.setText(val1)
         editText2.setText(val2)
